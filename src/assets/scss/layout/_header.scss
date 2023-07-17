@@ -1,5 +1,6 @@
 .header {
   padding: 20px 0;
+  background-color: #fff;
   &__right {
     display: flex;
     justify-content: space-between;
@@ -58,6 +59,7 @@
   top: 80px;
   left: 0;
   right: 0;
+  z-index: 100;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
@@ -180,3 +182,5 @@
     transform: translateY(-50%) scale(1);
   }
 }
+
+
