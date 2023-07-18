@@ -18,11 +18,11 @@ main {
 body {
   background-color: #f5f5f5;
   color: $black;
-  //&.opened-menu {
-  //  @include r(1024) {
-  //  overflow: hidden;
-  //  }
-  //}
+  &.opened-menu {
+    @include r(1024) {
+    overflow: hidden;
+    }
+  }
 }
 
 
@@ -112,6 +112,9 @@ img {
   justify-content: center;
   align-items: center;
   gap: 0 10px;
+  @include r(480) {
+    bottom: 30px;
+  }
   .swiper-pagination-bullet {
     border-radius: 50px;
     border: 1px solid $black;
@@ -128,6 +131,7 @@ img {
   &__btn {
     cursor: pointer;
     transition: opacity $trns;
+
   }
   &__btn.swiper-button-disabled {
     opacity: 0.5;

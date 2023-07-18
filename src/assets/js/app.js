@@ -20,29 +20,59 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-//
-//
-// // mobile menu
-// $(() => {
-//   const btnMenu = document.querySelectorAll('.js-open-mobile-menu');
-//   const menu = document.querySelector('.js-mobile-menu');
-//   const body = document.querySelector('body');
-//   btnMenu.forEach(function (el) {
-//     el.addEventListener('click', function (e) {
-//       e.stopPropagation();
-//       menu.classList.add('is-open');
-//       body.classList.add('opened-menu')
-//     });
-//   })
-//   const closeBtn = document.querySelector('.js-close-mobile-menu');
-//   closeBtn.addEventListener('click', function (e) {
-//     e.stopPropagation();
-//     menu.classList.remove('is-open');
-//     body.classList.remove('opened-menu')
-//   });
-// });
-//
-//
+
+
+// mobile menu
+$(() => {
+  const btnMenu = document.querySelectorAll('.js-burger');
+  const cloeMenu = document.querySelectorAll('.js-close-burger');
+  const btnCaption = document.querySelectorAll('.burger__caption')
+  const menu = document.querySelector('.js-mobile-menu');
+  const body = document.querySelector('body');
+  btnMenu.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation();
+      el.classList.toggle('is-active')
+      cloeMenu[0].classList.toggle('is-active')
+      if (btnCaption[1].innerHTML === "Меню") {
+        btnCaption[1].innerHTML = "Скрыть";
+      } else {
+        btnCaption[1].innerHTML = "Меню";
+      }
+      if (btnCaption[0].innerHTML === "Меню") {
+        btnCaption[0].innerHTML = "Скрыть";
+      } else {
+        btnCaption[0].innerHTML = "Меню";
+      }
+      menu.classList.toggle('is-open');
+      menu.style.top = headerHeight;
+      console.log(headerHeight)
+      body.classList.add('opened-menu')
+    });
+  })
+  cloeMenu.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation();
+      el.classList.toggle('is-active')
+      btnMenu[0].classList.toggle('is-active')
+      btnCaption.innerHTML = "Меню"
+      if (btnCaption[1].innerHTML === "Меню") {
+        btnCaption[1].innerHTML = "Скрыть";
+      } else {
+        btnCaption[1].innerHTML = "Меню";
+      }
+      if (btnCaption[0].innerHTML === "Меню") {
+        btnCaption[0].innerHTML = "Скрыть";
+      } else {
+        btnCaption[0].innerHTML = "Меню";
+      }
+      menu.classList.toggle('is-open');
+      body.classList.remove('opened-menu')
+    });
+  })
+});
+
+
 
 //nav
 $('.js-nav-item').click(function(e) {
@@ -62,17 +92,21 @@ $(document).ready(function () {
             headerHeight = $('.header').outerHeight(true),
             // sidebarHeight = $('aside').outerHeight(true),
             footerOffsetTop = $('.js-stop-header').offset().top,
-            $header = $('.sub-menu'),
+            $subMenu = $('.sub-menu'),
+            $header = $('.header'),
             $miniLogo = $('.logo-mini');
           if (scrollDistance >= headerHeight) {
             $header.addClass('is-fixed');
+            $subMenu.addClass('is-fixed');
             $miniLogo.addClass('is-active');
           } else {
             $header.removeClass('is-fixed');
+            $subMenu.removeClass('is-fixed');
             $miniLogo.removeClass('is-active');
           }
           if (scrollDistance + headerHeight >= footerOffsetTop) {
             $header.removeClass('is-fixed');
+            $subMenu.removeClass('is-fixed');
             $miniLogo.removeClass('is-active');
           }
         };
@@ -146,6 +180,7 @@ $(() => {
   })
   let swiperCalculateNav = new Swiper(".js-calculate-nav",{
     speed: 900,
+
     watchSlidesProgress: true,
     centeredSlides: true,
     centeredSlidesBounds: true,
@@ -155,14 +190,18 @@ $(() => {
     },
     breakpoints: {
       320: {
-        slidesPerView: 2.1,
+        slidesPerView: 1,
         spaceBetween: 20,
       },
-      768: {
-        slidesPerView: 3.1,
+      1024: {
+        slidesPerView: 2,
         spaceBetween: 20,
       },
-      1280: {
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1400: {
         spaceBetween: 20,
         slidesPerView: 'auto',
       }
