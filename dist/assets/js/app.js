@@ -207,12 +207,15 @@ $(function () {
   });
 });
 $(document).ready(function () {
-  var checkLength = function checkLength(evt) {
-    if (dateFrom.value.length > 0) {
-      dateTo.removeAttribute('disabled');
-    } else dateTo.setAttribute('disabled', '');
+  var checkLength = function checkLength(el) {
+    console.log($(this).val());
+    if ($(this).val().length > 0) {
+      $(this).closest('div').find('input[name="date-to"]').removeAttr('disabled');
+    } else {
+      $(this).closest('div').find('input[name="date-to"]').attr('disabled', '');
+    }
   };
-  var dateFrom = document.querySelector('input[name="date-from"]');
-  var dateTo = document.querySelector('input[name="date-to"]');
-  dateFrom.addEventListener('input', checkLength);
+  var dateFrom = $('input[name="date-from"]');
+  var dateTo = $('input[name="date-to"]');
+  dateFrom.on('input', checkLength);
 });

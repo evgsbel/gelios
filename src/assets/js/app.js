@@ -73,9 +73,8 @@ $(() => {
 });
 
 
-
 //nav
-$('.js-nav-item').click(function(e) {
+$('.js-nav-item').click(function (e) {
   e.preventDefault()
   $('.js-nav-item').removeClass('is-active')
   $(this).addClass('is-active')
@@ -136,28 +135,28 @@ $(() => {
   });
 
   //service slider
-    let swiperService = new Swiper(".js-service-slider",{
-      speed: 900,
-      navigation: {
-        nextEl: ".swiper-button-next-srv",
-        prevEl: ".swiper-button-prev-srv",
+  let swiperService = new Swiper(".js-service-slider", {
+    speed: 900,
+    navigation: {
+      nextEl: ".swiper-button-next-srv",
+      prevEl: ".swiper-button-prev-srv",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 30,
       },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-        1280: {
-          spaceBetween: 30,
-          slidesPerView: 3,
-        }
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1280: {
+        spaceBetween: 30,
+        slidesPerView: 3,
       }
-    })
-  let swiperNews = new Swiper(".js-news-slider",{
+    }
+  })
+  let swiperNews = new Swiper(".js-news-slider", {
     speed: 900,
     navigation: {
       nextEl: ".swiper-button-next-news",
@@ -178,7 +177,7 @@ $(() => {
       }
     }
   })
-  let swiperCalculateNav = new Swiper(".js-calculate-nav",{
+  let swiperCalculateNav = new Swiper(".js-calculate-nav", {
     speed: 900,
 
     watchSlidesProgress: true,
@@ -209,15 +208,25 @@ $(() => {
   })
 });
 
-$(document).ready(function() {
-  const checkLength = function(evt) {
-    if (dateFrom.value.length > 0) {
-      dateTo.removeAttribute('disabled')
+$(document).ready(function () {
+  const checkLength = function (el) {
+    console.log($(this).val())
+    if ($(this).val().length > 0) {
+      $(this)
+        .closest('div')
+        .find('input[name="date-to"]')
+        .removeAttr('disabled')
+    } else {
+
+      $(this)
+        .closest('div')
+        .find('input[name="date-to"]')
+        .attr('disabled', '')
     }
-    else dateTo.setAttribute('disabled', '')
+
   }
 
-  const dateFrom = document.querySelector('input[name="date-from"]')
-  let dateTo = document.querySelector('input[name="date-to"]')
-  dateFrom.addEventListener('input', checkLength)
+  const dateFrom = $('input[name="date-from"]')
+  let dateTo = $('input[name="date-to"]')
+  dateFrom.on('input', checkLength)
 });

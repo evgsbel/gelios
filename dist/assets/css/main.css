@@ -13245,7 +13245,12 @@ ul {
   }
 }
 .calculate-form__group input {
-  width: 180px;
+  min-width: 180px;
+}
+@media only screen and (max-width: 576px) {
+  .calculate-form__group input {
+    width: 50%;
+  }
 }
 .calculate-form__group-caption {
   margin-right: 27px;

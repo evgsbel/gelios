@@ -518,7 +518,10 @@
       }
     }
     input {
-      width: 180px;
+      min-width: 180px;
+      @include r(576) {
+        width: 50%;
+      }
     }
   }
   &__group-caption {
