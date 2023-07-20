@@ -13249,7 +13249,7 @@ ul {
 }
 @media only screen and (max-width: 576px) {
   .calculate-form__group input {
-    width: 50%;
+    width: 100%;
   }
 }
 .calculate-form__group-caption {

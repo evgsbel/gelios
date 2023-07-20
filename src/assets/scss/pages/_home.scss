@@ -520,7 +520,7 @@
     input {
       min-width: 180px;
       @include r(576) {
-        width: 50%;
+        width: 100%;
       }
     }
   }
