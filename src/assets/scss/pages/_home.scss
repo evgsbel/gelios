@@ -1,11 +1,18 @@
 .hero {
   position: relative;
-  background: linear-gradient(-225deg, #F26123 0%, #FFE040 50.52%, #8DC63F 100%);
-  height: 800px;
+  background-image: linear-gradient(-225deg, #F26123 0%, #FFE040 50.52%, #8DC63F 100%);
+  height: 700px;
   max-height: 100vh;
+  @include r(1280) {
+    background-image: url('../img/hero-bg-laptop.png');
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
   @include r(768) {
     max-height: none;
-    height: 650px;
+    height: auto;
+    padding: 50px 0 170px;
+
   }
   @include h(600) {
     max-height: none;
@@ -68,10 +75,7 @@
       }
     }
     @include r(1100) {
-      background-image: url('../img/hero-bg-laptop.png');
-      -webkit-background-size: cover;
-      background-size: cover;
-
+      background: none;
     }
   }
   &__content {
@@ -88,6 +92,12 @@
     @include r(1440) {
       font-size: 35px;
     }
+    @include r(768) {
+      font-weight: 800;
+    }
+    @include r(480) {
+      font-size: 28px;
+    }
   }
   &__subtitle {
     font-size: 30px;
@@ -99,28 +109,46 @@
     @include r(1440) {
       font-size: 23px;
     }
+    @include r(480) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
   }
   &__btn {
     width: 200px;
     height: 75px;
     font-size: 22px;
     margin-bottom: 25px;
+    @include r(768) {
+      width: 170px;
+      height: 64px;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
   }
 }
 
 //service
 .service {
   margin-bottom: 100px;
+  @include r(768) {
+    margin-top: -70px;
+  }
   &__item {
     position: relative;
     z-index: 50;
-    margin-top: -85px;
+    margin-top: -95px;
     border-radius: 20px;
     background: #fff;
     padding-bottom: 20px;
     overflow: hidden;
     @include r(768) {
       margin-top: 30px;
+    }
+    @include r(576) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     &:hover {
       .service__img {
@@ -142,6 +170,9 @@
     font-size: 20px;
     text-align: center;
     transition: text-shadow $trns, color $trns;
+    @include r(360) {
+      font-size: 16px;
+    }
     &::after {
       content: '';
       position: absolute;
