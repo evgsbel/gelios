@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 100;
   &.is-fixed {
-    @include r(1100) {
+    @include r(1280) {
       position: fixed;
       top: 0;
     }
@@ -57,7 +57,7 @@
 }
 
 .nav {
-  @include r(1100) {
+  @include r(1280) {
     display: none;
   }
 
@@ -119,13 +119,17 @@
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
   backdrop-filter: blur(10px);
-
+  @include r(1440) {
+    width: 1200px;
+  }
   &.is-fixed {
     position: fixed;
     top: 0;
-
     .sub-menu__list {
       transform: translateX(30px);
+      @include r(1440) {
+        transform: translateX(60px);
+      }
     }
   }
 
@@ -151,6 +155,10 @@
     font-size: 18px;
     line-height: 1;
     transition: background-color $trns, color $trns;
+    @include r(1440) {
+      padding: 26px 25px;
+      font-size: 17px;
+    }
     @include r(1280) {
       padding: 26px 20px;
       font-size: 16px;
@@ -261,7 +269,7 @@
   font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
-  @include r(1100) {
+  @include r(1280) {
     display: flex;
   }
   &_close {
@@ -374,7 +382,7 @@
   transform: translateX(-100%);
   transition: 0.7s transform cubic-bezier(0.25, 0.46, 0.45, 0.94);
   pointer-events: none;
-  @include rmin(1100) {
+  @include rmin(1280) {
     display: none;
   }
   &.is-open {

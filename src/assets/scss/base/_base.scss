@@ -112,7 +112,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 0 10px;
-  @include r(480) {
+  @include r(576) {
     bottom: 30px;
   }
   .swiper-pagination-bullet {

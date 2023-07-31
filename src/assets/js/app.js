@@ -137,6 +137,7 @@ $(() => {
   //service slider
   let swiperService = new Swiper(".js-service-slider", {
     speed: 900,
+    autoHeight: false,
     navigation: {
       nextEl: ".swiper-button-next-srv",
       prevEl: ".swiper-button-prev-srv",
@@ -158,6 +159,7 @@ $(() => {
   })
   let swiperNews = new Swiper(".js-news-slider", {
     speed: 900,
+    autoHeight: false,
     navigation: {
       nextEl: ".swiper-button-next-news",
       prevEl: ".swiper-button-prev-news",
@@ -177,12 +179,78 @@ $(() => {
       }
     }
   })
-  let swiperCalculateNav = new Swiper(".js-calculate-nav", {
-    speed: 900,
+
+  //manufactures-slider
+  let swiperManufacturesLogo = new Swiper(".js-manufactures-logo-slider", {
+    spaceBetween: 100,
+    slidesPerView: 6,
 
     watchSlidesProgress: true,
-    centeredSlides: true,
-    centeredSlidesBounds: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 100,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 100,
+      },
+      576: {
+        slidesPerView: 4,
+        spaceBetween: 100
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 100
+      }
+    }
+  });
+  let swiperManufactures = new Swiper(".js-manufactures-slider", {
+    navigation: {
+      nextEl: ".swiper-button-next-man",
+      prevEl: ".swiper-button-prev-man",
+    },
+    thumbs: {
+      swiper: swiperManufacturesLogo,
+    },
+    speed: 900,
+  });
+
+
+  // let swiperCalculateNav = new Swiper(".js-calculate-nav", {
+  //   speed: 900,
+  //   watchSlidesProgress: true,
+  //   centeredSlides: true,
+  //   centeredSlidesBounds: true,
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   breakpoints: {
+  //     320: {
+  //       slidesPerView: 1,
+  //       spaceBetween: 20,
+  //     },
+  //     1024: {
+  //       slidesPerView: 2,
+  //       spaceBetween: 20,
+  //     },
+  //     1200: {
+  //       slidesPerView: 3,
+  //       spaceBetween: 20,
+  //     },
+  //     1400: {
+  //       spaceBetween: 20,
+  //       slidesPerView: 'auto',
+  //     }
+  //   }
+  // })
+
+  //manufactures-slider
+  let swiperCalculateNav = new Swiper(".js-calculate-nav", {
+    speed: 900,
+    watchSlidesProgress: true,
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -193,19 +261,31 @@ $(() => {
         spaceBetween: 20,
       },
       1024: {
+        centeredSlides: true,
+        centeredSlidesBounds: true,
         slidesPerView: 2,
         spaceBetween: 20,
       },
       1200: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 20,
       },
-      1400: {
-        spaceBetween: 20,
-        slidesPerView: 'auto',
-      }
+
     }
-  })
+  });
+  let swiperCalculate = new Swiper(".js-calculate-slider", {
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiperCalculateNav,
+    },
+    speed: 900,
+  });
+
+
 });
 
 $(document).ready(function () {
@@ -225,7 +305,6 @@ $(document).ready(function () {
     }
 
   }
-
   const dateFrom = $('input[name="date-from"]')
   let dateTo = $('input[name="date-to"]')
   dateFrom.on('input', checkLength)
