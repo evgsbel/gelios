@@ -8,3 +8,14 @@
     @content
   }
 }
+@mixin h($height) {
+  @media only screen and (max-height: $height + "px") {
+    @content
+  }
+}
+@mixin hmin($height) {
+  @media only screen and (min-height: $height + "px") {
+    @content
+  }
+}
+
