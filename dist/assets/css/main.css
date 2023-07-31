@@ -11788,6 +11788,7 @@ img {
   bottom: 20%;
   left: 0;
   right: 0;
+  z-index: 50;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12831,7 +12832,7 @@ ul {
 .service__item {
   position: relative;
   z-index: 50;
-  margin-top: -95px;
+  margin-top: -85px;
   border-radius: 20px;
   background: #fff;
   padding-bottom: 20px;
