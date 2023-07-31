@@ -13185,9 +13185,6 @@ ul {
   background-color: #F26123;
   border-color: #F26123;
 }
-.calculate .swiper-slide.swiper-slide-visible.swiper-slide-next + .swiper-slide-visible {
-  opacity: 0.3;
-}
 .calculate__nav-btn {
   position: absolute;
   top: 35%;

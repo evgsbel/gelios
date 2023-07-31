@@ -438,9 +438,9 @@
       border-color: $orange;
     }
   }
-  .swiper-slide.swiper-slide-visible.swiper-slide-next + .swiper-slide-visible {
-    opacity: 0.3;
-  }
+  //.swiper-slide.swiper-slide-visible.swiper-slide-next + .swiper-slide-visible {
+  //  opacity: 0.3;
+  //}
   &__nav-btn {
     position: absolute;
     top: 35%;
