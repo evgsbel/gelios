@@ -13278,7 +13278,8 @@ ul {
   border-color: #f26123;
 }
 .calculate__nav-item:not(.swiper-slide-visible) {
-  opacity: 0.5;
+  opacity: 0;
+  visibility: hidden;
 }
 .calculate__nav-btn {
   position: absolute;

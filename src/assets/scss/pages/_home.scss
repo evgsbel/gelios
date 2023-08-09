@@ -476,7 +476,8 @@
     }
   }
   &__nav-item:not(.swiper-slide-visible)  {
-    opacity: 0.5;
+    opacity: 0;
+    visibility: hidden;
   }
   &__nav-btn {
     position: absolute;
