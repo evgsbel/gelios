@@ -425,7 +425,7 @@ template {
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #cb000e;
-  --orange: #F26123;
+  --orange: #f26123;
   --yellow: #ffc107;
   --green: #8DC63F;
   --teal: #20c997;
@@ -11750,7 +11750,7 @@ img {
   max-width: 100%;
   font-size: 16px;
   font-weight: 700;
-  background-color: #F26123;
+  background-color: #f26123;
   border-radius: 100px;
   color: #fff;
   -webkit-transition: background-color 0.5s ease;
@@ -11982,6 +11982,13 @@ ul {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
+.header__search {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.header__search:hover {
+  opacity: 0.7;
+}
 .header__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12012,6 +12019,11 @@ ul {
           align-items: center;
   gap: 0 10px;
   font-weight: 700;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.header__phone:hover, .header__login:hover {
+  color: #f26123;
 }
 .header__phone svg, .header__login svg {
   -webkit-box-flex: 0;
@@ -12065,7 +12077,7 @@ ul {
   font-size: 20px;
 }
 .nav__item.is-active .nav__link {
-  color: #F26123;
+  color: #f26123;
 }
 .nav__item.is-active .nav__link::before {
   content: "";
@@ -12089,7 +12101,7 @@ ul {
   transition: color 0.5s ease;
 }
 .nav__link:hover {
-  color: #F26123;
+  color: #f26123;
 }
 
 .sub-menu {
@@ -12177,7 +12189,7 @@ ul {
 }
 .sub-menu__item:hover {
   background-color: #fff;
-  color: #F26123;
+  color: #f26123;
 }
 .sub-menu__item:hover > .third-menu {
   opacity: 1;
@@ -12195,7 +12207,7 @@ ul {
   gap: 0 10px;
   font-size: 14px;
   font-weight: 700;
-  color: #F26123;
+  color: #f26123;
 }
 .sub-menu__office svg {
   -webkit-box-flex: 0;
@@ -12343,7 +12355,7 @@ ul {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #F26123;
+  background-color: #f26123;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -12534,13 +12546,13 @@ ul {
 @media only screen and (max-width: 480px) {
   .footer__btn {
     background-image: none;
-    border: 1px solid #F26123;
+    border: 1px solid #f26123;
     margin-bottom: 20px;
     font-size: 16px;
   }
 }
 .footer__btn:hover {
-  background-color: #F26123;
+  background-color: #f26123;
   color: #fff;
 }
 .footer__nav {
@@ -12557,7 +12569,16 @@ ul {
   }
 }
 .footer__list-item {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
   line-height: 40px;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.footer__list-item:hover {
+  color: #f26123;
 }
 .footer__bottom-list {
   display: -webkit-box;
@@ -12585,6 +12606,11 @@ ul {
 .footer__bottom-item {
   font-size: 14px;
   line-height: 40px;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.footer__bottom-item:not(p):hover {
+  color: #f26123;
 }
 @media only screen and (max-width: 1200px) {
   .footer__bottom-item {
@@ -12609,6 +12635,14 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 0 16px;
+}
+.social svg {
+  fill: #fff;
+  -webkit-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+}
+.social__item:hover svg {
+  fill: #f26123;
 }
 
 .breadcrumbs {
@@ -12709,7 +12743,7 @@ ul {
   height: 321px;
   position: absolute;
   top: 80px;
-  right: 3px;
+  right: -20px;
 }
 @media only screen and (max-width: 1100px) {
   .hero__inner::after {
@@ -12717,7 +12751,7 @@ ul {
   }
 }
 .hero__inner::before {
-  content: "Всегда там, где нужны";
+  content: "";
   position: absolute;
   bottom: 30px;
   right: 0;
@@ -12861,8 +12895,8 @@ ul {
           transform: scale(1.2);
 }
 .service__item:hover .service__caption {
-  color: #F26123;
-  text-shadow: 0.3px 0 0 #F26123;
+  color: #f26123;
+  text-shadow: 0.3px 0 0 #f26123;
 }
 .service__img {
   margin-bottom: 20px;
@@ -12915,8 +12949,8 @@ ul {
 }
 .insurance__item:hover {
   background-color: #fff;
-  -webkit-box-shadow: 0px 4px 120px 0px rgba(110, 116, 122, 0.25);
-          box-shadow: 0px 4px 120px 0px rgba(110, 116, 122, 0.25);
+  -webkit-box-shadow: 0 4px 35px 0 rgba(110, 116, 122, 0.25);
+          box-shadow: 0 4px 35px 0 rgba(110, 116, 122, 0.25);
 }
 .insurance__item:hover .insurance__caption {
   color: #000;
@@ -12934,7 +12968,7 @@ ul {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 .insurance__info {
-  padding: 30px 20px 0;
+  padding: 30px 30px 0;
 }
 .insurance__caption {
   min-height: 70px;
@@ -12960,24 +12994,16 @@ ul {
 }
 .insurance__nav-btn {
   position: absolute;
-  top: 55%;
+  top: 65%;
+  -webkit-transform: translateY(-65%);
+          transform: translateY(-65%);
   z-index: 20;
 }
 .insurance__nav-btn_left {
-  left: -30px;
-}
-@media only screen and (max-width: 1024px) {
-  .insurance__nav-btn_left {
-    left: 0;
-  }
+  left: 20px;
 }
 .insurance__nav-btn_right {
-  right: -30px;
-}
-@media only screen and (max-width: 1024px) {
-  .insurance__nav-btn_right {
-    right: 0;
-  }
+  right: 20px;
 }
 .insurance__heading {
   display: -webkit-box;
@@ -12998,7 +13024,7 @@ ul {
 .insurance__link {
   font-size: 18px;
   line-height: 20px;
-  color: #F26123;
+  color: #f26123;
   position: absolute;
   left: 20px;
   right: 0;
@@ -13008,7 +13034,8 @@ ul {
   height: auto;
 }
 .insurance .swiper {
-  padding-bottom: 50px;
+  padding: 0 30px 70px;
+  margin: 0 -30px;
 }
 
 .advantages {
@@ -13087,7 +13114,7 @@ ul {
 .advantages__caption span {
   display: block;
   font-weight: 700;
-  color: #F26123;
+  color: #f26123;
 }
 .advantages__caption b {
   font-size: 40px;
@@ -13217,11 +13244,11 @@ ul {
           backdrop-filter: blur(10px);
 }
 .calculate__nav-item {
-  padding: 20px 40px;
+  padding: 20px 10px;
   border-radius: 100px;
   border: 1px solid rgba(110, 116, 122, 0.2);
   color: #6E747A;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1;
   width: -webkit-max-content;
@@ -13239,12 +13266,15 @@ ul {
   }
 }
 .calculate__nav-item:hover {
-  color: #F26123;
+  color: #f26123;
 }
 .calculate__nav-item.is-active, .calculate__nav-item.swiper-slide-thumb-active {
   color: #fff;
-  background-color: #F26123;
-  border-color: #F26123;
+  background-color: #f26123;
+  border-color: #f26123;
+}
+.calculate__nav-item:not(.swiper-slide-visible) {
+  opacity: 0.5;
 }
 .calculate__nav-btn {
   position: absolute;
@@ -13308,7 +13338,7 @@ ul {
   padding-left: 30px;
   padding-right: 15px;
   border-radius: 100px;
-  border: 1px solid #6E747A;
+  border: 1px solid rgba(242, 97, 35, 0.5);
   height: 60px;
   font-size: 18px;
   font-weight: 700;
@@ -13338,6 +13368,10 @@ ul {
   font-size: 18px;
   font-weight: 700;
   color: #6E747A;
+}
+.calculate-form__input:focus, .calculate-form__input:active {
+  outline: none;
+  border-color: #f26123;
 }
 .calculate-form__input_number::-webkit-outer-spin-button, .calculate-form__input_number::-webkit-inner-spin-button {
   -webkit-appearance: none;

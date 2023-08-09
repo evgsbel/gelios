@@ -49,13 +49,13 @@
       height: 321px;
       position: absolute;
       top: 80px;
-      right: 3px;
+      right: -20px;
       @include r(1100) {
         content: none;
       }
     }
     &::before {
-      content: 'Всегда там, где нужны';
+      content: '';
       position: absolute;
       bottom: 30px;
       right: 0;
@@ -204,7 +204,7 @@
     height: 100%;
     &:hover {
       background-color: #fff;
-      box-shadow: 0px 4px 120px 0px rgba(110, 116, 122, 0.25);
+      box-shadow: 0 4px 35px 0 rgba(110, 116, 122, 0.25);
       .insurance__caption {
         color: #000;
       }
@@ -219,8 +219,7 @@
     transition: transform $trns
   }
   &__info {
-
-    padding: 30px 20px 0;
+    padding: 30px 30px 0;
   }
   &__caption {
     min-height: 70px;
@@ -245,19 +244,16 @@
   }
   &__nav-btn {
     position: absolute;
-    top: 55%;
+    top: 65%;
+    transform: translateY(-65%);
     z-index: 20;
     &_left {
-      left: -30px;
-      @include r(1024) {
-        left: 0;
-      }
+      left: 20px;
+
     }
     &_right {
-      right: -30px;
-      @include r(1024) {
-        right: 0;
-      }
+      right: 20px;
+
     }
   }
   &__heading {
@@ -283,7 +279,8 @@
     height: auto;
   }
   .swiper {
-    padding-bottom: 50px;
+    padding: 0 30px 70px;
+    margin: 0 -30px;
   }
 }
 
@@ -449,11 +446,11 @@
     backdrop-filter: blur(10px);
   }
   &__nav-item {
-    padding: 20px 40px;
+    padding: 20px 10px;
     border-radius: 100px;
     border: 1px solid rgba(110, 116, 122, 0.2);
     color: $grey;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1;
     width: max-content;
@@ -474,9 +471,9 @@
       border-color: $orange;
     }
   }
-  //.swiper-slide.swiper-slide-visible.swiper-slide-next + .swiper-slide-visible {
-  //  opacity: 0.3;
-  //}
+  &__nav-item:not(.swiper-slide-visible)  {
+    opacity: 0.5;
+  }
   &__nav-btn {
     position: absolute;
     top: 35%;
@@ -535,7 +532,7 @@
     padding-left: 30px;
     padding-right: 15px;
     border-radius: 100px;
-    border: 1px solid #6E747A;
+    border: 1px solid rgba(242,97,35,0.5);
     height: 60px;
     font-size: 18px;
     font-weight: 700;
@@ -544,6 +541,11 @@
       font-size: 18px;
       font-weight: 700;
       color: $grey;
+    }
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: $orange;
     }
     &_number {
       &::-webkit-outer-spin-button,

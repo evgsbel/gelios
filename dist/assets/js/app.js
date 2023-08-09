@@ -128,7 +128,8 @@ $(function () {
   //hero-slider
   var swiperHero = new Swiper(".js-hero-slider", {
     pagination: {
-      el: ".swiper-pagination"
+      el: ".swiper-pagination",
+      clickable: true
     },
     autoplay: true,
     speed: 900
@@ -180,41 +181,6 @@ $(function () {
     }
   });
 
-  //manufactures-slider
-  var swiperManufacturesLogo = new Swiper(".js-manufactures-logo-slider", {
-    spaceBetween: 100,
-    slidesPerView: 6,
-    watchSlidesProgress: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 100
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 100
-      },
-      576: {
-        slidesPerView: 4,
-        spaceBetween: 100
-      },
-      1024: {
-        slidesPerView: 6,
-        spaceBetween: 100
-      }
-    }
-  });
-  var swiperManufactures = new Swiper(".js-manufactures-slider", {
-    navigation: {
-      nextEl: ".swiper-button-next-man",
-      prevEl: ".swiper-button-prev-man"
-    },
-    thumbs: {
-      swiper: swiperManufacturesLogo
-    },
-    speed: 900
-  });
-
   // let swiperCalculateNav = new Swiper(".js-calculate-nav", {
   //   speed: 900,
   //   watchSlidesProgress: true,
@@ -257,14 +223,16 @@ $(function () {
         slidesPerView: 1,
         spaceBetween: 20
       },
-      1024: {
-        centeredSlides: true,
-        centeredSlidesBounds: true,
+      768: {
         slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1280: {
+        slidesPerView: 3,
         spaceBetween: 20
       },
-      1200: {
-        slidesPerView: 'auto',
+      1440: {
+        slidesPerView: 4,
         spaceBetween: 20
       }
     }
