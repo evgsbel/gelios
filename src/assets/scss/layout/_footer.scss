@@ -134,17 +134,43 @@
     align-items: center;
     gap: 0 16px;
   }
-
-  svg {
-    fill: #fff;
-    transition: fill $trns;
-  }
-
   &__item {
-    &:hover {
-      svg {
-        fill: $orange;
+    transition: background-image $trns;
+    background-repeat: no-repeat;
+    &:first-child {
+      background-image: url("../img/sprite.svg#icon-vk");
+      &:hover {
+        background-image: url("../img/sprite.svg#icon-vk-active");
       }
     }
+    &:nth-child(2) {
+      background-image: url("../img/sprite.svg#icon-tlg");
+      &:hover {
+        background-image: url("../img/sprite.svg#icon-tlg-active");
+      }
+    }
+    &:nth-child(3) {
+      background-image: url("../img/sprite.svg#icon-ya");
+      &:hover {
+        background-image: url("../img/sprite.svg#icon-ya-active");
+      }
+    }
+    &:nth-child(4) {
+      background-image: url("../img/sprite.svg#icon-ok");
+      &:hover {
+        background-image: url("../img/sprite.svg#icon-ok-active");
+      }
+    }
+    &:nth-child(5) {
+      background-image: url("../img/sprite.svg#icon-ru");
+      &:hover {
+        background-image: url("../img/sprite.svg#icon-ru-active");
+      }
+    }
+  }
+  &__link {
+    display: block;
+    width: 48px;
+    height: 48px;
   }
 }

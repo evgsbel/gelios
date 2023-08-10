@@ -34,46 +34,47 @@
     width: 100%;
     height: 100%;
   }
+  //&::before {
+  //  content: '';
+  //  background-image: url("data:image/svg+xml,%3Csvg width='577' height='321' viewBox='0 0 577 321' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_610_117' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='640' height='321'%3E%3Cpath opacity='0.7' fill-rule='evenodd' clip-rule='evenodd' d='M0 321H145.739C145.739 224.47 223.767 146.204 319.994 146.204C416.22 146.204 494.248 224.47 494.248 321H640C640 143.725 496.732 0 319.994 0C143.255 0 0 143.725 0 321Z' fill='url(%23paint0_linear_610_117)'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_610_117)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 321H145.739C145.739 224.47 223.767 146.204 319.994 146.204C416.22 146.204 494.248 224.47 494.248 321H640C640 143.725 496.732 0 319.994 0C143.255 0 0 143.725 0 321Z' fill='url(%23paint1_linear_610_117)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_610_117' x1='0' y1='0' x2='640' y2='-1.44516e-05' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.1875' stop-color='white'/%3E%3Cstop offset='0.395833' stop-color='white' stop-opacity='0'/%3E%3Cstop offset='0.609375' stop-color='white' stop-opacity='0'/%3E%3Cstop offset='0.859375' stop-color='white'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_610_117' x1='299.754' y1='563.186' x2='344.297' y2='19.0257' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFDE3C'/%3E%3Cstop offset='0.388235' stop-color='%23FFDE3C'/%3E%3Cstop offset='1' stop-color='%23F26123'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  //  background-repeat: no-repeat;
+  //  width: 577px;
+  //  height: 321px;
+  //  position: absolute;
+  //  top: 80px;
+  //  right: -20px;
+  //  @include r(1100) {
+  //    content: none;
+  //  }
+  //}
   &__inner {
     position: relative;
-    background-image: url('../img/hero-bg.png');
+    background-image: url('../img/hero-bg-new.png');
     background-repeat: no-repeat;
     height: 100%;
     background-position: center right;
     background-size: contain;
-    &::after {
-      content: '';
-      background-image: url("data:image/svg+xml,%3Csvg width='577' height='321' viewBox='0 0 577 321' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_610_117' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='640' height='321'%3E%3Cpath opacity='0.7' fill-rule='evenodd' clip-rule='evenodd' d='M0 321H145.739C145.739 224.47 223.767 146.204 319.994 146.204C416.22 146.204 494.248 224.47 494.248 321H640C640 143.725 496.732 0 319.994 0C143.255 0 0 143.725 0 321Z' fill='url(%23paint0_linear_610_117)'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_610_117)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 321H145.739C145.739 224.47 223.767 146.204 319.994 146.204C416.22 146.204 494.248 224.47 494.248 321H640C640 143.725 496.732 0 319.994 0C143.255 0 0 143.725 0 321Z' fill='url(%23paint1_linear_610_117)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_610_117' x1='0' y1='0' x2='640' y2='-1.44516e-05' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.1875' stop-color='white'/%3E%3Cstop offset='0.395833' stop-color='white' stop-opacity='0'/%3E%3Cstop offset='0.609375' stop-color='white' stop-opacity='0'/%3E%3Cstop offset='0.859375' stop-color='white'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_610_117' x1='299.754' y1='563.186' x2='344.297' y2='19.0257' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFDE3C'/%3E%3Cstop offset='0.388235' stop-color='%23FFDE3C'/%3E%3Cstop offset='1' stop-color='%23F26123'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-      background-repeat: no-repeat;
-      width: 577px;
-      height: 321px;
-      position: absolute;
-      top: 80px;
-      right: -20px;
-      @include r(1100) {
-        content: none;
-      }
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 30px;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 554px;
-      height: 194px;
-      background-image: url("data:image/svg+xml,%3Csvg width='554' height='194' viewBox='0 0 554 194' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M596 0H0C50.5175 114.204 164.817 194 298.014 194C431.159 194 545.485 114.204 596 0Z' fill='url(%23paint0_radial_447_304)'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_447_304' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(303.956 -116.392) rotate(91.5111) scale(485.288 486.455)'%3E%3Cstop offset='0.061819' stop-color='%23FFE040'/%3E%3Cstop offset='0.496154' stop-color='%238DC63F'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-      background-repeat: no-repeat;
-      color: #fff;
-      font-weight: 900;
-      font-size: 20px;
-      text-transform: uppercase;
-      @include r(1100) {
-        content: none;
-      }
-    }
+
+    //&::before {
+    //  content: '';
+    //  position: absolute;
+    //  bottom: 30px;
+    //  right: 0;
+    //  display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+    //  width: 554px;
+    //  height: 194px;
+    //  background-image: url("data:image/svg+xml,%3Csvg width='554' height='194' viewBox='0 0 554 194' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M596 0H0C50.5175 114.204 164.817 194 298.014 194C431.159 194 545.485 114.204 596 0Z' fill='url(%23paint0_radial_447_304)'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_447_304' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(303.956 -116.392) rotate(91.5111) scale(485.288 486.455)'%3E%3Cstop offset='0.061819' stop-color='%23FFE040'/%3E%3Cstop offset='0.496154' stop-color='%238DC63F'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    //  background-repeat: no-repeat;
+    //  color: #fff;
+    //  font-weight: 900;
+    //  font-size: 20px;
+    //  text-transform: uppercase;
+    //  @include r(1100) {
+    //    content: none;
+    //  }
+    //}
     @include r(1100) {
       background: none;
     }
