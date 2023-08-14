@@ -83,6 +83,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include r(576) {
+      padding: 0 15px;
+    }
   }
   &__title {
     margin-bottom: 30px;
@@ -249,6 +252,10 @@
     top: 50%;
     transform: translateY(-65%);
     z-index: 20;
+    padding: 15px;
+    @include r(576) {
+      padding: 0;
+    }
     svg {
       fill: #6E747A;
       transition: fill $trns;
@@ -257,10 +264,10 @@
       fill: $orange;
     }
     &_left {
-      right: 15px;
+      right: 0;
     }
     &_right {
-      left: 15px;
+      left: 0;
     }
   }
   &__heading {

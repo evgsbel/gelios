@@ -137,7 +137,7 @@ $(() => {
 
   //service slider
   let swiperService = new Swiper(".js-service-slider", {
-    speed: 900,
+
     autoHeight: false,
     navigation: {
       nextEl: ".swiper-button-next-srv",
@@ -159,7 +159,7 @@ $(() => {
     }
   })
   let swiperNews = new Swiper(".js-news-slider", {
-    speed: 900,
+
     autoHeight: false,
     navigation: {
       nextEl: ".swiper-button-next-news",
@@ -214,7 +214,7 @@ $(() => {
 
   //manufactures-slider
   let swiperCalculateNav = new Swiper(".js-calculate-nav", {
-    speed: 900,
+
     watchSlidesProgress: true,
 
     navigation: {

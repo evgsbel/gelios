@@ -137,7 +137,6 @@ $(function () {
 
   //service slider
   var swiperService = new Swiper(".js-service-slider", {
-    speed: 900,
     autoHeight: false,
     navigation: {
       nextEl: ".swiper-button-next-srv",
@@ -159,7 +158,6 @@ $(function () {
     }
   });
   var swiperNews = new Swiper(".js-news-slider", {
-    speed: 900,
     autoHeight: false,
     navigation: {
       nextEl: ".swiper-button-next-news",
@@ -212,7 +210,6 @@ $(function () {
 
   //manufactures-slider
   var swiperCalculateNav = new Swiper(".js-calculate-nav", {
-    speed: 900,
     watchSlidesProgress: true,
     navigation: {
       nextEl: ".swiper-button-next",

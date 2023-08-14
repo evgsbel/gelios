@@ -12784,6 +12784,11 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media only screen and (max-width: 576px) {
+  .hero__content {
+    padding: 0 15px;
+  }
+}
 .hero__title {
   margin-bottom: 30px;
 }
@@ -12988,6 +12993,12 @@ ul {
   -webkit-transform: translateY(-65%);
           transform: translateY(-65%);
   z-index: 20;
+  padding: 15px;
+}
+@media only screen and (max-width: 576px) {
+  .insurance__nav-btn {
+    padding: 0;
+  }
 }
 .insurance__nav-btn svg {
   fill: #6E747A;
@@ -12998,10 +13009,10 @@ ul {
   fill: #f26123;
 }
 .insurance__nav-btn_left {
-  right: 15px;
+  right: 0;
 }
 .insurance__nav-btn_right {
-  left: 15px;
+  left: 0;
 }
 .insurance__heading {
   display: -webkit-box;
