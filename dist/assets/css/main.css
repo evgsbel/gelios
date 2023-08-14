@@ -13002,8 +13002,8 @@ ul {
 }
 .insurance__nav-btn svg {
   fill: #6E747A;
-  -webkit-transition: fill 0.5s ease;
-  transition: fill 0.5s ease;
+  -webkit-transition: fill 0.1s ease-in-out;
+  transition: fill 0.1s ease-in-out;
 }
 .insurance__nav-btn:hover svg {
   fill: #f26123;

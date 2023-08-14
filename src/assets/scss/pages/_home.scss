@@ -258,7 +258,7 @@
     }
     svg {
       fill: #6E747A;
-      transition: fill $trns;
+      transition: fill .1s ease-in-out;
     }
     &:hover svg {
       fill: $orange;
