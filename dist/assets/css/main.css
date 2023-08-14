@@ -12957,7 +12957,7 @@ ul {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 .insurance__info {
-  padding: 30px 50px 0;
+  padding: 30px 20px 0;
 }
 .insurance__caption {
   min-height: 70px;
@@ -12984,16 +12984,24 @@ ul {
 }
 .insurance__nav-btn {
   position: absolute;
-  top: 65%;
+  top: 50%;
   -webkit-transform: translateY(-65%);
           transform: translateY(-65%);
   z-index: 20;
 }
+.insurance__nav-btn svg {
+  fill: #6E747A;
+  -webkit-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+}
+.insurance__nav-btn:hover svg {
+  fill: #f26123;
+}
 .insurance__nav-btn_left {
-  left: 25px;
+  right: 15px;
 }
 .insurance__nav-btn_right {
-  right: 25px;
+  left: 15px;
 }
 .insurance__heading {
   display: -webkit-box;
@@ -13019,7 +13027,7 @@ ul {
   line-height: 20px;
   color: #f26123;
   position: absolute;
-  left: 50px;
+  left: 20px;
   right: 0;
   bottom: 30px;
 }
@@ -13027,8 +13035,13 @@ ul {
   height: auto;
 }
 .insurance .swiper {
-  padding: 0 30px 70px;
-  margin: 0 -30px;
+  padding: 0 29px 70px;
+  margin: 0 -29px;
+}
+@media only screen and (max-width: 360px) {
+  .insurance__col {
+    padding: 0;
+  }
 }
 
 .advantages {
@@ -13274,6 +13287,14 @@ ul {
   position: absolute;
   top: 35%;
   z-index: 50;
+}
+.calculate__nav-btn svg {
+  fill: #6E747A;
+  -webkit-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+}
+.calculate__nav-btn:hover svg {
+  fill: #f26123;
 }
 .calculate__nav-btn_left {
   left: 30px;

@@ -166,7 +166,7 @@ $(() => {
       prevEl: ".swiper-button-prev-news",
     },
     breakpoints: {
-      320: {
+      319: {
         slidesPerView: 1,
         spaceBetween: 30,
       },
@@ -174,7 +174,7 @@ $(() => {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      1280: {
+      1400: {
         spaceBetween: 30,
         slidesPerView: 3,
       }

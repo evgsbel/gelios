@@ -220,7 +220,7 @@
     transition: transform $trns
   }
   &__info {
-    padding: 30px 50px 0;
+    padding: 30px 20px 0;
   }
   &__caption {
     min-height: 70px;
@@ -246,16 +246,21 @@
   }
   &__nav-btn {
     position: absolute;
-    top: 65%;
+    top: 50%;
     transform: translateY(-65%);
     z-index: 20;
+    svg {
+      fill: #6E747A;
+      transition: fill $trns;
+    }
+    &:hover svg {
+      fill: $orange;
+    }
     &_left {
-      left: 25px;
-
+      right: 15px;
     }
     &_right {
-      right: 25px;
-
+      left: 15px;
     }
   }
   &__heading {
@@ -276,7 +281,7 @@
     line-height: 20px;
     color: $orange;
     position: absolute;
-    left: 50px;
+    left: 20px;
     right: 0;
     bottom: 30px;
   }
@@ -284,8 +289,13 @@
     height: auto;
   }
   .swiper {
-    padding: 0 30px 70px;
-    margin: 0 -30px;
+    padding: 0 29px 70px;
+    margin: 0 -29px;
+  }
+  &__col {
+    @include r(360) {
+      padding: 0;
+    }
   }
 }
 
@@ -484,12 +494,20 @@
     position: absolute;
     top: 35%;
     z-index: 50;
+    svg {
+      fill: #6E747A;
+      transition: fill $trns;
+    }
+    &:hover svg {
+      fill: $orange;
+    }
     &_left {
       left: 30px;
     }
     &_right {
       right: 30px;
     }
+
   }
   &__content {
     border-radius: 20px;
