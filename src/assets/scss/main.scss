@@ -35,10 +35,12 @@
 
 // 5. Components
 @import
-'components/breadcrumbs';
+'components/breadcrumbs',
+'components/pagination';
 
 // 6. Page-specific styles
 @import
+  'pages/inner',
   'pages/home';
 
 // 7. Themes

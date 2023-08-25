@@ -1,0 +1,44 @@
+.pagination {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 15px;
+    width: 100%;
+  }
+  &__link {
+    font-size: 18px;
+    color: #aab3bc;
+    transition: all $trns;
+    &:hover {
+      color: $orange;
+    }
+    &_active {
+      font-weight: 700;
+      color: $orange;
+    }
+    &_page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #D9D9D9;
+      border-radius: 50%;
+      svg {
+        fill: #6E747A;
+        transition: fill $trns;
+      }
+      &:hover {
+        background-color: $orange;
+        border-color: #fff;
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+
+  }
+}

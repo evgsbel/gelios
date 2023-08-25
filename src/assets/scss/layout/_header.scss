@@ -427,6 +427,9 @@
   &__icon {
     transform: rotate(-180deg);
     transition: transform $trns;
+    svg {
+      stroke: $orange;
+    }
   }
    &__caption {
      font-size: 20px;
