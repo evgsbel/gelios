@@ -13154,6 +13154,11 @@ ul {
   margin-bottom: 33vh;
   border-radius: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .news-in__img {
+    margin: 0 auto 30px;
+  }
+}
 .news-in__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13165,6 +13170,18 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 55px;
+}
+@media only screen and (max-width: 1280px) {
+  .news-in__heading {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 15px 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .news-in__heading {
+    margin-bottom: 30px;
+  }
 }
 .news-in__date, .news-in__check, .news-in__author {
   display: -webkit-box;
@@ -13217,6 +13234,10 @@ ul {
 .news-in__content {
   margin-bottom: 70px;
 }
+.news-in .insurance .swiper {
+  padding: 0 0 70px;
+  margin: 0;
+}
 
 .read-also {
   display: -webkit-box;
@@ -13229,6 +13250,11 @@ ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+@media only screen and (max-width: 768px) {
+  .read-also {
+    display: none;
+  }
 }
 .read-also__item {
   position: relative;
@@ -13351,9 +13377,27 @@ ul {
   background-position: top right;
   background-size: contain;
 }
+@media only screen and (max-width: 1280px) {
+  .offer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .offer__img {
+    width: 100%;
+  }
+}
 .offer__info {
   padding-top: 30px;
+  padding-bottom: 30px;
   max-width: 47%;
+}
+@media only screen and (max-width: 1280px) {
+  .offer__info {
+    padding: 20px;
+    max-width: 100%;
+  }
 }
 .offer__caption {
   color: #58595B;
@@ -13361,25 +13405,50 @@ ul {
   font-size: 32px;
   font-weight: 700;
 }
+@media only screen and (max-width: 768px) {
+  .offer__caption {
+    font-size: 23px;
+  }
+}
 .offer__subtitle {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .offer__subtitle {
+    font-size: 16px;
+  }
 }
 .offer__description {
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 768px) {
+  .offer__description {
+    font-size: 16px;
+  }
+}
 .offer__price {
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 35px;
 }
+@media only screen and (max-width: 768px) {
+  .offer__price {
+    font-size: 16px;
+  }
+}
 .offer__price span {
   color: #f26123;
   font-size: 32px;
   font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .offer__price span {
+    font-size: 28px;
+  }
 }
 .offer__btn {
   font-size: 18px;
